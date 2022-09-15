@@ -1,0 +1,206 @@
+* {
+    margin: 0;
+    padding: 0;
+    
+}
+#pagina {
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    color: white;
+    font-family: 'Bebas Neue', cursive;
+    font-weight: 400;
+    line-height: 1.6;
+    display: grid;
+    grid-template-rows: 2fr 2fr 1fr;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-areas: "header header header"
+                        "main main main"
+                        "footer footer footer";
+}
+
+
+
+header {
+grid-area: header;
+}
+
+h1 {
+    text-align:center;
+    font-size: 4rem;
+}
+h2 {
+    text-align: left;
+    font-size: 2rem;
+}
+
+nav {
+    list-style-type: none;
+    margin-left: 20px;
+    text-align:left;
+    font-size: 2rem;
+}
+ul {
+    list-style-type: none;
+}
+a {
+    color: white;
+}
+form {
+    font-size: 2rem;
+}
+
+    
+main {
+    background-color: black;
+    grid-area: main;
+    display: grid;
+    grid-template-rows:2fr 1fr ;
+    grid-template-columns:2fr 1fr ;
+    grid-template-areas:"img1 texto"
+                    "audio audio";  
+}
+main--Videos {
+    grid-area: main;
+    display: grid;
+    grid-template-rows:.5fr 1fr;
+    grid-template-columns:1fr 1fr;
+    grid-template-areas: "h2 h2"
+                        "video1 video1"
+                        "video2 video2"
+                        "video3 video3";
+    grid-row-gap: 1rem;
+}
+main--Fotos {
+    background-color: black;
+    grid-area: main;
+    display: grid;
+    grid-row-gap: 1rem;
+}
+main--Contactos {
+    background-color: black;
+    grid-area: main;
+    display: grid;
+    grid-template-rows:.5fr 2fr ;
+
+}
+imgs {
+    margin-left: -300px;
+    grid-area: imgs;
+    display: grid;
+    grid-template-rows:2fr 2fr;
+    grid-template-columns: 0.5fr 0.5fr;
+    grid-template-areas: "img1 img2"
+                        "img3 img4";
+    grid-row-gap: 1rem;
+    grid-column-gap: 1rem;
+
+}
+video1 {
+    display: grid;
+    grid-template-areas: video1;
+}
+video2 {
+    display: grid;
+    grid-template-areas: video2;
+}
+video3 {
+    display: grid;
+    grid-template-areas: video3;
+}
+footer {
+    font-size: 4rem;
+    grid-area:footer;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "imgig imgtwt imgfbk";
+    }
+
+texto {
+    grid-area: texto;
+    margin-left: -310px;
+}
+redes {
+
+
+}
+
+audio {
+    grid-area: audio;
+}
+
+.imagen1 {
+grid-area: img1;
+width: 600px;
+height: 300px;
+margin: 0px;
+border: 2px solid white;
+}
+.fotos {
+    border: 5px white solid;
+    width: 300px;
+}
+.videos {
+    border: 5px white solid;
+    width: 560px;
+}
+
+.textoInicio {
+    background-color: black;
+    text-align:center;
+    margin-left: -100px;
+    color: white;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 2rem;
+}
+.songInicio {
+    margin-left: 100px;
+    width: 400px;
+}
+.enviar {
+    color: black;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.6;
+} 
+
+/* DESKTOP FIRST*/
+@media only screen and(max-width:1200px){
+
+}
+
+@media only screen and(max-width:1024px){
+}
+
+@media only screen and(min-width: 768px)and(max-width:1023px){
+    #pagina{
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 2fr;
+    grid-template-areas: "header"
+                        "main"
+                        "footer";
+                    }
+                    main {
+                        background-color: black;
+                        grid-area: main;
+                        display: grid;
+                        grid-template-rows:2fr 1fr 1fr ;
+                        grid-template-columns:2fr 1fr ;
+                        grid-template-areas:"img1 img1"
+                                        "audio audio"
+                                        "texto texto";  
+                    }
+}
+
+@media only screen and(max-width:468px){
+    #pagina{
+        background-color: black;
+    }
+}
+
+@media only screen and(max-width:320px){
+    #pagina{
+        background-color: black;
+    }
+}
